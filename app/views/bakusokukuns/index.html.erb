@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Bakusokukuns</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Time jst</th>
+      <th>Num of pages</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bakusokukuns.each do |bakusokukun| %>
+      <tr>
+        <td><%= bakusokukun.Time_JST %></td>
+        <td><%= bakusokukun.Num_of_Pages %></td>
+        <td><%= link_to 'Show', bakusokukun %></td>
+        <td><%= link_to 'Edit', edit_bakusokukun_path(bakusokukun) %></td>
+        <td><%= link_to 'Destroy', bakusokukun, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bakusokukun', new_bakusokukun_path %>
+<br>
+<% t = Time.zone.now %>
+<% t1 = Time.zone.local(2017, 1,6, 16, 30, 0) %>
+<% jukenday = (t1- t)/(60*60) %>
+
+締め切りの2017年01月06日16時30分まで、残り<%= jukenday.truncate %>時間....！

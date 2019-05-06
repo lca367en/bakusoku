@@ -1,0 +1,2 @@
+module BakusokukunsHelper
+end

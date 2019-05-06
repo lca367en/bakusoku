@@ -1,0 +1,1 @@
+json.array! @bakusokukuns, partial: 'bakusokukuns/bakusokukun', as: :bakusokukun

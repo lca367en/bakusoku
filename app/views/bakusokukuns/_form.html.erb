@@ -1,0 +1,25 @@
+<%= form_for(@bakusokukun) do |f| %>
+  <% if @bakusokukun.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bakusokukun.errors.count, "error") %> prohibited this bakusokukun from being saved:</h2>
+
+      <ul>
+      <% @bakusokukun.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Time_JST %><br>
+    <%= f.datetime_select :Time_JST %>
+  </div>
+  <div class="field">
+    <%= f.label :Num_of_Pages %><br>
+    <%= f.number_field :Num_of_Pages %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Time_JST: 2016-12-05 14:37:32
+  Num_of_Pages: 1
+
+two:
+  Time_JST: 2016-12-05 14:37:32
+  Num_of_Pages: 1
